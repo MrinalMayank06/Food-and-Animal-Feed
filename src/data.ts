@@ -1,0 +1,173 @@
+import { Product, District, TickerUpdate, FeedMixIngredient } from './types';
+
+export const BIHAR_DISTRICTS: District[] = [
+  { id: 'muzaffarpur', nameEn: 'Muzaffarpur', nameHi: 'मुजफ्फरपुर', priceMultiplier: 1.00, deliveryChargePerKm: 10 },
+  { id: 'patna', nameEn: 'Patna', nameHi: 'पटना', priceMultiplier: 1.06, deliveryChargePerKm: 12 },
+  { id: 'darbhanga', nameEn: 'Darbhanga', nameHi: 'दरभंगा', priceMultiplier: 1.02, deliveryChargePerKm: 11 },
+  { id: 'bhagalpur', nameEn: 'Bhagalpur', nameHi: 'भागलपुर', priceMultiplier: 1.04, deliveryChargePerKm: 12 },
+  { id: 'begusarai', nameEn: 'Begusarai', nameHi: 'बेगूसराय', priceMultiplier: 0.98, deliveryChargePerKm: 9 },
+  { id: 'samastipur', nameEn: 'Samastipur', nameHi: 'समस्तीपुर', priceMultiplier: 0.99, deliveryChargePerKm: 10 },
+  { id: 'gaya', nameEn: 'Gaya', nameHi: 'गया', priceMultiplier: 1.03, deliveryChargePerKm: 11 }
+];
+
+export const BIHAR_PRODUCTS: Product[] = [
+  {
+    id: 'cement-naad-medium',
+    nameEn: 'Circular Cement Naad (3ft)',
+    nameHi: 'गोल सीमेंट नाद (3 फीट)',
+    categoryEn: 'Feeding Troughs / नाद',
+    categoryHi: 'नाद',
+    basePrice: 480,
+    unitEn: 'per piece',
+    unitHi: 'प्रति पीस',
+    image: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&q=80&w=600',
+    descriptionEn: 'High-strength concrete reinforced feeding trough. Extremely durable, polished inner layer to prevent mouth injury to cattle.',
+    descriptionHi: 'मजबूत कंक्रीट और सरिये से बनी नाद। अत्यधिक टिकाऊ, पशुओं के मुंह को चोट से बचाने के लिए भीतर से चिकनी पॉलिश की गई।',
+    nutritionEn: 'Capacity: Fits approx 15kg dry bhusa mix. Perfect for 1-2 cows.',
+    nutritionHi: 'क्षमता: लगभग 15 किलो सूखा भूसा मिश्रण। 1-2 गायों के लिए एकदम सही।',
+    inStock: true,
+    trend: 'stable',
+    changePercentage: 0
+  },
+  {
+    id: 'cement-naad-large',
+    nameEn: 'Reinforced Double-Size Cement Naad (4.5ft)',
+    nameHi: 'मजबूत डबल-साइज़ सीमेंट नाद (4.5 फीट)',
+    categoryEn: 'Feeding Troughs / नाद',
+    categoryHi: 'नाद',
+    basePrice: 950,
+    unitEn: 'per piece',
+    unitHi: 'प्रति पीस',
+    image: 'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&q=80&w=600',
+    descriptionEn: 'Extra-long heavy-duty cement trough reinforced with premium iron wire. Ideal for commercial dairy farms to feed 3-4 cows simultaneously.',
+    descriptionHi: 'प्रीमियम लोहे के तारों से सुदृढ़ अतिरिक्त लंबी सीमेंट नाद। व्यावसायिक डेयरी फार्मों के लिए 3-4 गायों को एक साथ खिलाने के लिए उत्तम।',
+    nutritionEn: 'Capacity: Fits approx 35kg fodder. Double partition design.',
+    nutritionHi: 'क्षमता: लगभग 35 किलो चारा। दोहरा विभाजन डिज़ाइन।',
+    inStock: true,
+    trend: 'up',
+    changePercentage: 2.1
+  },
+  {
+    id: 'clay-nand-small',
+    nameEn: 'Traditional Earthen Terracotta Nand',
+    nameHi: 'पारंपरिक मिट्टी की नाद (नंद)',
+    categoryEn: 'Feeding Troughs / नाद',
+    categoryHi: 'नाद',
+    basePrice: 190,
+    unitEn: 'per piece',
+    unitHi: 'प्रति पीस',
+    image: 'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&q=80&w=600',
+    descriptionEn: 'Eco-friendly, naturally cooling clay nand made by local Bihari artisans. Highly recommended for calves and small goats.',
+    descriptionHi: 'स्थानीय बिहारी कुम्हारों द्वारा निर्मित पर्यावरण-अनुकूल, प्राकृतिक रूप से ठंडी मिट्टी की नाद। बछड़ों और बकरियों के लिए सर्वोत्तम।',
+    nutritionEn: 'Cooling properties maintain water & fodder freshness in peak summer.',
+    nutritionHi: 'मिट्टी के विशेष गुण चिलचिलाती गर्मी में भी पानी और चारे की ताज़गी बनाए रखते हैं।',
+    inStock: true,
+    trend: 'stable',
+    changePercentage: 0
+  },
+  {
+    id: 'wheat-straw-bhusa',
+    nameEn: 'Premium Golden Wheat Straw (Bhusa)',
+    nameHi: 'प्रीमियम गेहूं का पीला भूसा',
+    categoryEn: 'Dry Fodder / सूखा चारा',
+    categoryHi: 'सूखा चारा',
+    basePrice: 920,
+    unitEn: 'per quintal (100kg)',
+    unitHi: 'प्रति क्विंटल (100kg)',
+    image: 'https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&q=80&w=600',
+    descriptionEn: 'Sun-dried premium wheat straw with zero moisture. Free from dust, stones, or pesticide residues. Provides high fiber for rumination.',
+    descriptionHi: 'धूप में सुखाया गया प्रीमियम गेहूं का भूसा जिसमें नमी शून्य है। धूल, कंकड़ या कीटनाशक अवशेषों से पूरी तरह मुक्त। पशु के पाचन के लिए आवश्यक फाइबर।',
+    nutritionEn: 'Dry Matter: 90%, Crude Protein: 3.5%, Crude Fiber: 38%. Highly digestible.',
+    nutritionHi: 'शुष्क पदार्थ: 90%, कच्चा प्रोटीन: 3.5%, कच्चा फाइबर: 38%। आसानी से पचने योग्य।',
+    inStock: true,
+    trend: 'up',
+    changePercentage: 4.8
+  },
+  {
+    id: 'wheat-bran-chokar',
+    nameEn: 'Premium Wheat Bran / Bhusi (Chokar)',
+    nameHi: 'प्रीमियम गेहूं का चोकर / भूसी',
+    categoryEn: 'Concentrates / चोकर-खली',
+    categoryHi: 'चोकर-खली',
+    basePrice: 1350,
+    unitEn: 'per 50kg bag',
+    unitHi: 'प्रति 50kg बोरी',
+    image: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&q=80&w=600',
+    descriptionEn: 'Highly nutritional milled wheat bran. Rich in phosphorus and dietary fiber, crucial for increasing milk fat percentage.',
+    descriptionHi: 'अत्यधिक पौष्टिक पिसा हुआ गेहूं का चोकर। फास्फोरस और फाइबर से भरपूर, दूध में फैट (वसा) का प्रतिशत बढ़ाने के लिए बेहद जरूरी।',
+    nutritionEn: 'Crude Protein: 14.5%, Crude Fat: 3.2%, Digestible Energy: 2800 kcal/kg.',
+    nutritionHi: 'कच्चा प्रोटीन: 14.5%, कच्चा फैट: 3.2%, पाचन ऊर्जा: 2800 किलोकैलोरी/किग्रा।',
+    inStock: true,
+    trend: 'down',
+    changePercentage: -1.5
+  },
+  {
+    id: 'mustard-oil-cake',
+    nameEn: 'Pure Cold-Pressed Mustard Cake (Sarso Khali)',
+    nameHi: 'शुद्ध सरसों की खल (सरसों खली)',
+    categoryEn: 'Concentrates / चोकर-खली',
+    categoryHi: 'चोकर-खली',
+    basePrice: 2850,
+    unitEn: 'per quintal (100kg)',
+    unitHi: 'प्रति क्विंटल (100kg)',
+    image: 'https://images.unsplash.com/photo-1508747703725-719ae2c13d4b?auto=format&fit=crop&q=80&w=600',
+    descriptionEn: 'Traditional mustard oil cake rich in proteins and natural oils. Enhances the immunities and gives glossy skin to the cattle.',
+    descriptionHi: 'प्रोटीन और प्राकृतिक तेलों से भरपूर पारंपरिक सरसों की खल। पशुओं की रोग प्रतिरोधक क्षमता बढ़ाता है और त्वचा को चमकदार बनाता है।',
+    nutritionEn: 'Protein: 36%, Oil content: 7.5%, Rich in essential amino acids.',
+    nutritionHi: 'प्रोटीन: 36%, तेल की मात्रा: 7.5%, आवश्यक अमीनो एसिड से भरपूर।',
+    inStock: true,
+    trend: 'up',
+    changePercentage: 1.2
+  },
+  {
+    id: 'cattle-feed-pellets',
+    nameEn: 'Balanced Super Milk Pellets (पशु आहार)',
+    nameHi: 'संतुलित सुपर मिल्क फीड पेलेट्स',
+    categoryEn: 'Concentrates / चोकर-खली',
+    categoryHi: 'चोकर-खली',
+    basePrice: 1450,
+    unitEn: 'per 50kg bag',
+    unitHi: 'प्रति 50kg बोरी',
+    image: 'https://images.unsplash.com/photo-1535262412227-85541e910204?auto=format&fit=crop&q=80&w=600',
+    descriptionEn: 'Formulated compound feed containing grains, oil cakes, minerals, and vitamins. Specially engineered to increase high-yield milk production.',
+    descriptionHi: 'अनाज, खली, खनिजों और विटामिनों से युक्त संतुलित मिश्रित पशु आहार। विशेष रूप से अधिक दूध देने वाले पशुओं के लिए तैयार किया गया।',
+    nutritionEn: 'Bypass Protein: 20%, Bypass Fat: 4%, Added Calcium & Chelated Minerals.',
+    nutritionHi: 'बाईपास प्रोटीन: 20%, बाईपास फैट: 4%, अतिरिक्त कैल्शियम और मिनरल्स।',
+    inStock: true,
+    trend: 'stable',
+    changePercentage: 0
+  },
+  {
+    id: 'calcium-mineral-mix',
+    nameEn: 'Chelated Mineral Mixture Powder',
+    nameHi: 'चिलेटेड मिनरल मिक्सचर पाउडर',
+    categoryEn: 'Supplements / पूरक आहार',
+    categoryHi: 'पूरक आहार',
+    basePrice: 420,
+    unitEn: 'per 5kg pack',
+    unitHi: 'प्रति 5kg पैकेट',
+    image: 'https://images.unsplash.com/photo-1607619056574-7b8f30413b46?auto=format&fit=crop&q=80&w=600',
+    descriptionEn: 'Vitamins A, D3, E along with copper, zinc, manganese, and phosphorus. Prevents milk fever and increases breeding efficiency.',
+    descriptionHi: 'विटामिन ए, डी3, ई के साथ तांबा, जस्ता, मैंगनीज और फास्फोरस। मिल्क फीवर को रोकता है और पशुओं की गर्भाधान क्षमता में सुधार लाता है।',
+    nutritionEn: 'Calcium: 240g, Phosphorus: 120g, Chelated Zinc: 9600mg per kg.',
+    nutritionHi: 'कैल्शियम: 240g, फास्फोरस: 120g, चिलेटेड जिंक: 9600mg प्रति किलोग्राम।',
+    inStock: true,
+    trend: 'stable',
+    changePercentage: 0
+  }
+];
+
+export const BIHAR_FEED_RECOMMENDATION: FeedMixIngredient[] = [
+  { nameEn: 'Wheat Straw (Bhusa)', nameHi: 'गेहूं का भूसा', ratio: 60, purposeEn: 'Provides essential structural fiber and dry matter for easy rumination.', purposeHi: 'पाचन क्रिया और पेट भरने के लिए आवश्यक सूखा रफेज प्रदान करता है।' },
+  { nameEn: 'Wheat Bran (Chokar / Bhusi)', nameHi: 'गेहूं का चोकर / भूसी', ratio: 22, purposeEn: 'Provides easy digestion, highly palatable carbohydrate, and milk volume.', purposeHi: 'पाचन को आसान बनाता है, स्वादिष्ट कार्बोहाइड्रेट और दूध की मात्रा बढ़ाता है।' },
+  { nameEn: 'Mustard Cake (Sarso Khali)', nameHi: 'सरसों की खल', ratio: 15, purposeEn: 'High bypass proteins and fat source to boost fat percentage in milk.', purposeHi: 'उच्च बाईपास प्रोटीन और फैट का स्रोत, जिससे दूध में मलाई और फैट बढ़ता है।' },
+  { nameEn: 'Minerals & Calcium', nameHi: 'मिनरल मिक्सचर', ratio: 3, purposeEn: 'Strengthens bones, enhances lactation duration, and prevents nutrient deficiency.', purposeHi: 'हड्डियों को मजबूत करता है, ब्यात चक्र सुधारता है और बीमारियों से बचाता है।' }
+];
+
+export const LIVE_TICKER_UPDATES: TickerUpdate[] = [
+  { id: '1', messageEn: '🌾 Wheat straw (Bhusa) rates up by ₹40 per quintal in Muzaffarpur Mandi due to monsoon stocking.', messageHi: '🌾 मॉनसून स्टॉक के कारण मुजफ्फरपुर मंडी में गेहूं के भूसे के दाम में ₹40 प्रति क्विंटल की बढ़त।', type: 'up', timestamp: '2 mins ago' },
+  { id: '2', messageEn: '📦 New batch of high-strength reinforced Cement Naads arrived at Samastipur warehouse.', messageHi: '📦 समस्तीपुर गोदाम में उच्च क्षमता वाले नए सीमेंटेड नाद का ताज़ा स्टॉक पहुंचा।', type: 'info', timestamp: '12 mins ago' },
+  { id: '3', messageEn: '📉 Chokar (Wheat Bran) prices dropped slightly in Patna Mandi due to fresh wheat milling.', messageHi: '📉 गेहूं की ताजा पिसाई के चलते पटना मंडी में चोकर की कीमतों में हल्की नरमी।', type: 'down', timestamp: '34 mins ago' },
+  { id: '4', messageEn: '🥛 Dairy experts advise mixing 30g Chelated Minerals daily in Cement Naad with dry Bhusa.', messageHi: '🥛 पशु विशेषज्ञों की सलाह: दूध बढ़ाने के लिए सीमेंट की नाद में सूखे भूसे के साथ रोज 30 ग्राम मिनरल मिक्सचर दें।', type: 'info', timestamp: '1 hour ago' },
+  { id: '5', messageEn: '🔥 Mustard Oil Cake (Sarso Khali) demand increases in Gaya dairy clusters; prices stable.', messageHi: '🔥 गया डेयरी क्लस्टर में सरसों की खल की मांग बढ़ी; कीमतें फिलहाल स्थिर हैं।', type: 'info', timestamp: '2 hours ago' }
+];

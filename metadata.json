@@ -1,0 +1,6 @@
+{
+  "name": "Bihar Naad & Pashu Aahar Market",
+  "description": "A premium, interactive real-time shop and live market tracker for cattle feeding troughs (Naad) and livestock fodder (Bhusa, Bhusi, Khali) in Bihar, complete with district-wise pricing research, live weight calculator, and authentic products.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
